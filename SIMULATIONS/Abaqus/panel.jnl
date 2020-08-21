@@ -1,0 +1,410 @@
+# Save by Marij on 2020_04_16-17.36.14; build 2020 2019_09_13-18.49.31 163176
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['stiffener'].features['Shell extrude-1'].sketch)
+mdb.models['Model-1'].parts['stiffener'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['stiffener'].features['Shell extrude-1'])
+mdb.models['Model-1'].sketches['__edit__'].parameters['C'].setValues(
+    expression='15')
+mdb.models['Model-1'].parts['stiffener'].features['Shell extrude-1'].setValues(
+    sketch=mdb.models['Model-1'].sketches['__edit__'])
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].parts['stiffener'].regenerate()
+mdb.models['Model-1'].parts['stiffener'].generateMesh()
+# Save by Marij on 2020_04_16-18.25.52; build 2020 2019_09_13-18.49.31 163176
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.jobs['case3'].submit(consistencyChecking=OFF)
+mdb.jobs['case3']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'DESKTOP-MU5TMQR', 'handle': 0, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY_STIFFENER_BOTTOM_SURF-ASSEMBLY_PLATE_TOP_SURF), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'case3'})
+mdb.jobs['case3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '22 nodes are constrained by a *TIE keyword and are also constrained to the reference node of a *RIGID BODY. The constraints enforced by the *TIE keyword will be removed to avoid overconstraints. The nodes have been identified in node set WarnNodeOverconTieInRbd.', 
+    'jobName': 'case3'})
+mdb.jobs['case3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '22 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'case3'})
+mdb.jobs['case3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '22 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'case3'})
+mdb.jobs['case3']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\SIMULIA\\WorkDir\\case3.odb', 'jobName': 'case3'})
+mdb.jobs['case3']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'case3'})
+mdb.jobs['case3']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'DESKTOP-MU5TMQR', 'handle': 15888, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'case3'})
+mdb.jobs['case3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'case3', 'memory': 188.0})
+mdb.jobs['case3']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16333.0, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(MINIMUM_MEMORY, {'minimum_memory': 28.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'case3', 'memory': 217.0})
+mdb.jobs['case3']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16333.0, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(MINIMUM_MEMORY, {'minimum_memory': 30.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'case3', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['case3']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'case3'})
+mdb.jobs['case3']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'case3'})
+mdb.jobs['case3']._Message(JOB_COMPLETED, {'time': 'Thu Apr 16 18:27:29 2020', 
+    'jobName': 'case3'})
+mdb.jobs['case3'].submit(consistencyChecking=OFF)
+mdb.jobs['case3']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'DESKTOP-MU5TMQR', 'handle': 0, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY_STIFFENER_BOTTOM_SURF-ASSEMBLY_PLATE_TOP_SURF), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'case3'})
+mdb.jobs['case3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '22 nodes are constrained by a *TIE keyword and are also constrained to the reference node of a *RIGID BODY. The constraints enforced by the *TIE keyword will be removed to avoid overconstraints. The nodes have been identified in node set WarnNodeOverconTieInRbd.', 
+    'jobName': 'case3'})
+mdb.jobs['case3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '22 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'case3'})
+mdb.jobs['case3']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '22 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'case3'})
+mdb.jobs['case3']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\SIMULIA\\WorkDir\\Abaqus\\case3.odb', 'jobName': 'case3'})
+mdb.jobs['case3']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'case3'})
+mdb.jobs['case3']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'DESKTOP-MU5TMQR', 'handle': 21432, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'case3'})
+mdb.jobs['case3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'case3', 'memory': 188.0})
+mdb.jobs['case3']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16333.0, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(MINIMUM_MEMORY, {'minimum_memory': 28.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'case3', 'memory': 217.0})
+mdb.jobs['case3']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16333.0, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(MINIMUM_MEMORY, {'minimum_memory': 30.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'case3'})
+mdb.jobs['case3']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'case3', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['case3']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'case3'})
+mdb.jobs['case3']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'case3'})
+mdb.jobs['case3']._Message(JOB_COMPLETED, {'time': 'Thu Apr 16 18:29:49 2020', 
+    'jobName': 'case3'})
+# Save by Marij on 2020_04_16-18.30.00; build 2020 2019_09_13-18.49.31 163176
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs.changeKey(fromName='case3', toName='panel')
+mdb.models.changeKey(fromName='Model-1', toName='panel')
+mdb.Job(name='panel-Copy', objectToCopy=mdb.jobs['panel'])
+mdb.jobs['panel-Copy'].setValues(model='panel')
+del mdb.jobs['panel']
+mdb.jobs.changeKey(fromName='panel-Copy', toName='panel')
+mdb.jobs['panel'].submit(consistencyChecking=OFF)
+mdb.jobs['panel']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'DESKTOP-MU5TMQR', 'handle': 0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY_STIFFENER_BOTTOM_SURF-ASSEMBLY_PLATE_TOP_SURF), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '22 nodes are constrained by a *TIE keyword and are also constrained to the reference node of a *RIGID BODY. The constraints enforced by the *TIE keyword will be removed to avoid overconstraints. The nodes have been identified in node set WarnNodeOverconTieInRbd.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '22 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '22 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\SIMULIA\\WorkDir\\panel.odb', 'jobName': 'panel'})
+mdb.jobs['panel']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'panel'})
+mdb.jobs['panel']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'DESKTOP-MU5TMQR', 'handle': 5724, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'panel', 'memory': 188.0})
+mdb.jobs['panel']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16333.0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MINIMUM_MEMORY, {'minimum_memory': 28.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'panel', 'memory': 217.0})
+mdb.jobs['panel']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16333.0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MINIMUM_MEMORY, {'minimum_memory': 30.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'panel'})
+# Save by Marij on 2020_04_16-18.36.18; build 2020 2019_09_13-18.49.31 163176
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['panel'].submit(consistencyChecking=OFF)
+mdb.jobs['panel']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'DESKTOP-MU5TMQR', 'handle': 0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY_STIFFENER_BOTTOM_SURF-ASSEMBLY_PLATE_TOP_SURF), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '22 nodes are constrained by a *TIE keyword and are also constrained to the reference node of a *RIGID BODY. The constraints enforced by the *TIE keyword will be removed to avoid overconstraints. The nodes have been identified in node set WarnNodeOverconTieInRbd.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '22 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '22 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\SIMULIA\\WorkDir\\Abaqus\\panel.odb', 'jobName': 'panel'})
+mdb.jobs['panel']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'panel'})
+mdb.jobs['panel']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'DESKTOP-MU5TMQR', 'handle': 20388, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'panel', 'memory': 188.0})
+mdb.jobs['panel']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16333.0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MINIMUM_MEMORY, {'minimum_memory': 28.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'panel', 'memory': 217.0})
+mdb.jobs['panel']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16333.0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MINIMUM_MEMORY, {'minimum_memory': 30.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'panel', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['panel']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'panel'})
+mdb.jobs['panel']._Message(JOB_COMPLETED, {'time': 'Thu Apr 16 18:42:39 2020', 
+    'jobName': 'panel'})
+# Save by Marij on 2020_04_16-18.42.52; build 2020 2019_09_13-18.49.31 163176
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['panel'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['panel'].parts['stiffener'].features['Shell extrude-1'].sketch)
+mdb.models['panel'].parts['stiffener'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['panel'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['panel'].parts['stiffener'].features['Shell extrude-1'])
+mdb.models['panel'].sketches['__edit__'].parameters['A'].setValues(expression=
+    '36')
+mdb.models['panel'].sketches['__edit__'].parameters['B'].setValues(expression=
+    '12')
+mdb.models['panel'].parts['stiffener'].features['Shell extrude-1'].setValues(
+    sketch=mdb.models['panel'].sketches['__edit__'])
+del mdb.models['panel'].sketches['__edit__']
+mdb.models['panel'].parts['stiffener'].regenerate()
+mdb.models['panel'].parts['stiffener'].generateMesh()
+mdb.models['panel'].rootAssembly.regenerate()
+mdb.jobs['panel'].submit(consistencyChecking=OFF)
+mdb.jobs['panel']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'DESKTOP-MU5TMQR', 'handle': 0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY_STIFFENER_BOTTOM_SURF-ASSEMBLY_PLATE_TOP_SURF), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '20 nodes are constrained by a *TIE keyword and are also constrained to the reference node of a *RIGID BODY. The constraints enforced by the *TIE keyword will be removed to avoid overconstraints. The nodes have been identified in node set WarnNodeOverconTieInRbd.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '20 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '20 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\SIMULIA\\WorkDir\\Abaqus\\panel.odb', 'jobName': 'panel'})
+mdb.jobs['panel']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'panel'})
+mdb.jobs['panel']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'DESKTOP-MU5TMQR', 'handle': 5832, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'panel', 'memory': 189.0})
+mdb.jobs['panel']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16333.0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MINIMUM_MEMORY, {'minimum_memory': 28.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'panel', 'memory': 218.0})
+mdb.jobs['panel']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16333.0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MINIMUM_MEMORY, {'minimum_memory': 30.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'panel', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['panel']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'panel'})
+mdb.jobs['panel']._Message(JOB_COMPLETED, {'time': 'Thu Apr 23 00:27:08 2020', 
+    'jobName': 'panel'})
+# Save by Marij on 2020_04_23-00.59.24; build 2020 2019_09_13-18.49.31 163176
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['panel'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['panel'].parts['stiffener'].features['Shell extrude-1'].sketch)
+mdb.models['panel'].parts['stiffener'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['panel'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['panel'].parts['stiffener'].features['Shell extrude-1'])
+del mdb.models['panel'].sketches['__edit__']
+mdb.jobs['panel'].submit(consistencyChecking=OFF)
+mdb.jobs['panel']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'DESKTOP-MU5TMQR', 'handle': 0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': 'FOR *TIE PAIR (ASSEMBLY_STIFFENER_BOTTOM_SURF-ASSEMBLY_PLATE_TOP_SURF), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '20 nodes are constrained by a *TIE keyword and are also constrained to the reference node of a *RIGID BODY. The constraints enforced by the *TIE keyword will be removed to avoid overconstraints. The nodes have been identified in node set WarnNodeOverconTieInRbd.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '20 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '20 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.', 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'D:\\FYP SIMS\\WorkDir\\Abaqus\\panel.odb', 'jobName': 'panel'})
+mdb.jobs['panel']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'panel'})
+mdb.jobs['panel']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'DESKTOP-MU5TMQR', 'handle': 9392, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'panel', 'memory': 189.0})
+mdb.jobs['panel']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16333.0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MINIMUM_MEMORY, {'minimum_memory': 28.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'panel', 'memory': 218.0})
+mdb.jobs['panel']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16333.0, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(MINIMUM_MEMORY, {'minimum_memory': 30.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'panel'})
+mdb.jobs['panel']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'panel', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['panel']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'panel'})
+mdb.jobs['panel']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'panel'})
+mdb.jobs['panel']._Message(JOB_COMPLETED, {'time': 'Thu Apr 23 19:12:40 2020', 
+    'jobName': 'panel'})
+# Save by Marij on 2020_04_23-19.13.50; build 2020 2019_09_13-18.49.31 163176

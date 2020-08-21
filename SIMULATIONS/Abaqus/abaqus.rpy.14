@@ -1,0 +1,28 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2020 replay file
+# Internal Version: 2019_09_13-18.49.31 163176
+# Run by Marij on Wed Apr 29 16:09:40 2020
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(1.45833, 1.52381), width=214.667, 
+    height=151.162)
+session.viewports['Viewport: 1'].makeCurrent()
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+execfile('userscript_odb.py', __main__.__dict__)
+#: Model: D:/Google Drive/4th Year/FYP/SIMULATIONS/Abaqus/panel.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     2
+#: Number of Meshes:             3
+#: Number of Element Sets:       6
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+print 'RT script done'
+#: RT script done

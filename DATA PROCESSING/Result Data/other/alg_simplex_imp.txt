@@ -1,0 +1,3 @@
+Status Code/Type	Row Name	Run #	Weight_MeanLoad	Weight_MeanMass	Weight_ReliableLoad	Weight_SDLoad	A	B	C	D	MeanLoad	MeanMass	ObjFunc	ReliableLoad	SDLoad	Design Feasibility	Objective and Penalty	Objective Function	Penalty Function
+OK	Task[1].Optimization1[1]/Subflow[7]	7	1	1	1	2	35.27999878	12.36149788	15.44999886	29.09999847	49.72736125	0.879537645	120.7413296	43.41418392	2.104408581	9	120.7413296	120.7413296	0
+OK	Task[1].Optimization1[1]/Subflow[9]	9	1	1	1	2	34.73999786	12.63261986	15.78749847	29.32499695	50.05798449	0.879992906	114.6559091	43.73662819	2.107134925	9	114.6559091	114.6559091	0

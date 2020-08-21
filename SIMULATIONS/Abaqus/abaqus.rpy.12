@@ -1,0 +1,62 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2020 replay file
+# Internal Version: 2019_09_13-18.49.31 163176
+# Run by Marij on Thu Apr 23 19:10:16 2020
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=287.875, 
+    height=198.704772949219)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(pathName='D:/FYP SIMS/WorkDir/Abaqus/panel.cae')
+#: The model database "D:\FYP SIMS\WorkDir\Abaqus\panel.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['panel'].parts['plate']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p1 = mdb.models['panel'].parts['stiffener']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['panel'].parts['stiffener']
+s = p.features['Shell extrude-1'].sketch
+mdb.models['panel'].ConstrainedSketch(name='__edit__', objectToCopy=s)
+s1 = mdb.models['panel'].sketches['__edit__']
+g, v, d, c = s1.geometry, s1.vertices, s1.dimensions, s1.constraints
+s1.setPrimaryObject(option=SUPERIMPOSE)
+p.projectReferencesOntoSketch(sketch=s1, 
+    upToFeature=p.features['Shell extrude-1'], filter=COPLANAR_EDGES)
+s1.unsetPrimaryObject()
+del mdb.models['panel'].sketches['__edit__']
+a = mdb.models['panel'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+mdb.jobs['panel'].submit(consistencyChecking=OFF)
+#: The job input file "panel.inp" has been submitted for analysis.
+#: Job panel: Analysis Input File Processor completed successfully.
+#: Job panel: Abaqus/Standard completed successfully.
+#: Job panel completed successfully. 
+o3 = session.openOdb(name='D:/FYP SIMS/WorkDir/Abaqus/panel.odb')
+#: Model: D:/FYP SIMS/WorkDir/Abaqus/panel.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     2
+#: Number of Meshes:             3
+#: Number of Element Sets:       6
+#: Number of Node Sets:          7
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+mdb.save()
+#: The model database has been saved to "D:\FYP SIMS\WorkDir\Abaqus\panel.cae".

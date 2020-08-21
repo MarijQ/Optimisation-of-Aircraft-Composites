@@ -1,0 +1,24 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2020 replay file
+# Internal Version: 2019_09_13-18.49.31 163176
+# Run by Marij on Wed Apr 29 16:08:59 2020
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(1.45833, 1.52381), width=214.667, 
+    height=151.162)
+session.viewports['Viewport: 1'].makeCurrent()
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+execfile('exec.py', __main__.__dict__)
+#: The model database "D:\Google Drive\4th Year\FYP\SIMULATIONS\Abaqus\panel.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+#: A new model database has been created.
+#: The model "Model-1" has been created.
+print 'RT script done'
+#: RT script done

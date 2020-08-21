@@ -1,0 +1,21 @@
+<?xml version="1.0"?><msgwrapper><Started><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">panel</jobName><clientHost type="string">DESKTOP-MU5TMQR</clientHost><handle type="integer">0</handle></Started>
+<Warning><message type="string">FOR *TIE PAIR (ASSEMBLY_STIFFENER_BOTTOM_SURF-ASSEMBLY_PLATE_TOP_SURF), ADJUSTMENT WAS SPECIFIED BUT NO NODE WAS ADJUSTED MORE THAN THE ADJUSTMENT DISTANCE = 2.22000E-16.</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">panel</jobName></Warning>
+<Warning><message type="string">20 nodes are constrained by a *TIE keyword and are also constrained to the reference node of a *RIGID BODY. The constraints enforced by the *TIE keyword will be removed to avoid overconstraints. The nodes have been identified in node set WarnNodeOverconTieInRbd.</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">panel</jobName></Warning>
+<Warning><message type="string">20 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">panel</jobName></Warning>
+<Warning><message type="string">20 nodes have dof on which incorrect boundary conditions may have been specified. The nodes have been identified in node set WarnNodeBCIncorrectDof.</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">panel</jobName></Warning>
+<Odb_File><file type="string">D:\FYP SIMS\WorkDir\Abaqus\panel.odb</file><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">panel</jobName></Odb_File>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">BATCHPRE_PHASE</phase><jobName type="string">panel</jobName></Completed>
+<Started><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">panel</jobName><clientHost type="string">DESKTOP-MU5TMQR</clientHost><handle type="integer">9392</handle></Started>
+<Step><stepId type="integer">1</stepId><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">panel</jobName></Step>
+<Odb_Frame><step type="integer">0</step><frame type="integer">0</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">panel</jobName></Odb_Frame>
+<MEMORY_ESTIMATE><memory type="float">189</memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">panel</jobName></MEMORY_ESTIMATE>
+<PHYSICAL_MEMORY><physical_memory type="float">16333</physical_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">panel</jobName></PHYSICAL_MEMORY>
+<MINIMUM_MEMORY><minimum_memory type="float">28</minimum_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">panel</jobName></MINIMUM_MEMORY>
+<MEMORY_ESTIMATE><memory type="float">218</memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">panel</jobName></MEMORY_ESTIMATE>
+<PHYSICAL_MEMORY><physical_memory type="float">16333</physical_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">panel</jobName></PHYSICAL_MEMORY>
+<MINIMUM_MEMORY><minimum_memory type="float">30</minimum_memory><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">panel</jobName></MINIMUM_MEMORY>
+<Odb_Frame><step type="integer">0</step><frame type="integer">1</frame><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">panel</jobName></Odb_Frame>
+<Status><step type="integer">1</step><increment type="integer">1</increment><attempts type="integer">1</attempts><severe type="integer">0</severe><equilibrium type="integer">0</equilibrium><iterations type="integer">0</iterations><totalTime type="float">0</totalTime><stepTime type="float">1e-36</stepTime><timeIncrement type="float">1e-36</timeIncrement><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">panel</jobName></Status>
+<End_Step><stepId type="integer">1</stepId><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">panel</jobName></End_Step>
+<Completed><message type="string">Analysis phase complete</message><phase type="symconst">STANDARD_PHASE</phase><jobName type="string">panel</jobName></Completed>
+<JOB_COMPLETED><jobName type="string">panel</jobName><time type="string">Thu Apr 23 19:12:40 2020</time></JOB_COMPLETED></msgwrapper>
